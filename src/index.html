@@ -9,6 +9,8 @@
 
     <meta property="og:title" content="Моя первая страница">
     <title>Диана Ковалевская - веб разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,7 +32,7 @@
     </header>
 
     <div class="main">
-        <div class="title__container">
+        <div class="title_container">
             <h1>Привет <br> Я Андрей Браун</h1>
             <h4>Фулл стек веб-разработчик</h4>
             <input type="submit" value="Обо мне">
@@ -40,98 +42,110 @@
 
     <div class="about">
         <h2>ОБО МНЕ</h2>
-        <img src="img/фотка1.png" alt="картинка не найдена">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nam quas exercitationem accusamus voluptatum corrupti praesentium eligendi aperiam alias dolores ipsam dolore aut quod, fugiat dignissimos beatae, perspiciatis, facilis, temporibus assumenda cumque sapiente.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptatem repellat itaque dignissimos sequi asperiores vitae minus illum eum harum unde quisquam quas ut commodi ratione hic quae fuga dolor, eos possimus excepturi.</p>
+        <img class="underl" src="img/underline.png" alt="подчёркивание">
+        <img id="ph1" src="img/фотка1.png" alt="картинка не найдена">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quaerat. Consectetur, reprehenderit. A veritatis assumenda, odit suscipit mollitia fuga facilis, sint unde accusantium doloribus numquam perferendis dolorum quae, rerum dicta, soluta natus quisquam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus itaque dolor velit assumenda atque dolore unde, numquam aperiam impedit quia illo quo delectus eius optio architecto mollitia quam quis beatae distinctio laborum, magni.</p>
         <input type="submit" value="Скачать резюме">
     </div>
 
     <div class="skills">
         <div class="skills_container">
             <h2>ЧТО Я УМЕЮ</h2>
+            <img class="underl" src="img/underline.png" alt="подчёркивание">
         </div>
-        <div class="web_designer">
-            <img src="img/ноут.png" alt="тут должен быть ноут">
-            <h3>Веб-дизайн</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt laboriosam dicta maxime ipsum dolores.</p>
-        </div>
-        <div class="development">
-            <img src="img/знак.png" alt="тут должен быть знак">
-            <h3>Разработка</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, eius esse dignissimos.</p>
-        </div>
-        <div class="optimization">
-            <img src="img/ракета.png" alt="тут должна быть ракета">
-            <h3>СЕО-Оптимизация</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt laboriosam dicta maxime ipsum dolores.</p>
-        </div>
-        <div class="marketing">
-            <img src="img/граммафон.png" alt="тут должен быть граммафон">
-            <h3>Маркетинг</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vitae, asperiores nesciunt quibusdam tempore.</p>
+        <div class="skills__container">
+            <div class="web_designer">
+                <img src="img/ноут.png" alt="тут должен быть ноут">
+                <h3>Веб-дизайн</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt laboriosam dicta maxime ipsum dolores.</p>
+            </div>
+            <div class="development">
+                <img src="img/знак.png" alt="тут должен быть знак">
+                <h3>Разработка</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, eius esse dignissimos.</p>
+            </div>
+            <div class="optimization">
+                <img src="img/ракета.png" alt="тут должна быть ракета">
+                <h3>СЕО-Оптимизация</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt laboriosam dicta maxime ipsum dolores.</p>
+            </div>
+            <div class="marketing">
+                <img src="img/граммафон.png" alt="тут должен быть граммафон">
+                <h3>Маркетинг</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vitae, asperiores nesciunt quibusdam tempore.</p>
+            </div>
         </div>
     </div>
 
     <div class="cases">
         <h2>КЕЙСЫ</h2>
+        <img class="underl" src="img/underline.png" alt="подчёркивание">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga, veniam officiis voluptate at nemo ullam similique dolor!</p>
         <img src="img/скриншот.png" alt="тут должен был быть скриншот">
     </div>
     <div class="contact_details">
-        <h3>CLIENT:</h3>
-        <p>Какие-то компании</p>
-        <h3>WEBSITE:</h3>
-        <a href="http://www.somedomain.com" target="_blank">http://www.somedomain.com</a>
-        <p><input type="submit" value="VISIT LIVE SITE"></p>
-        <h3>Название проекта</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, eaque! Autem, rerum pariatur magnam quas, sit doloremque deleniti aut tenetur ipsam repellat deserunt officia quaerat animi libero, alias excepturi quasi esse nihil fuga maiores reprehenderit praesentium sequi nobis dolore. Quae.</p>
+        <div class="contact_details1">
+            <h3>CLIENT:</h3>
+            <p>Какие-то компании</p>
+            <h3>WEBSITE:</h3>
+            <p><a href="http://www.somedomain.com" target="_blank">http://www.somedomain.com</a></p>
+            <p><input type="submit" value="VISIT LIVE SITE"></p>
+        </div>
+        <div class="contact_details2">
+            <h3>Название проекта</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, eaque! Autem, rerum pariatur magnam quas, sit doloremque deleniti aut tenetur ipsam repellat deserunt officia quaerat animi libero, alias excepturi quasi esse nihil fuga maiores reprehenderit praesentium sequi nobis dolore. Quae.</p>
+        </div>
     </div>
 
     <div class="cost_calculation">
         <form action="#">
             <h2>Расчет стоимости</h2>
-            <big>ТИП САЙТА</big>
-            <p><select name="type">
-                    <option selected> Выберите пункт...</option>
-                    <option value="Opt1">Интернет-представительство</option>
-                    <option value="Opt2">Информационный сайт</option>
-                    <option value="Opt3">Веб-сервис</option>
-                </select></p>
+            <div class="criteria">
+                <h3>ТИП САЙТА</h3>
+                <p><select name="type">
+                        <option selected> Выберите пункт...</option>
+                        <option value="Opt1">Интернет-представительство</option>
+                        <option value="Opt2">Информационный сайт</option>
+                        <option value="Opt3">Веб-сервис</option>
+                    </select></p>
 
-            <p><big>ДИЗАЙН</big></p>
-            <p><select name="design">
-                    <option selected> Выберите пункт...</option>
-                    <option value="Opt1">Красивый</option>
-                    <option value="Opt2">Средний</option>
-                    <option value="Opt3">Отвратительный</option>
-                </select></p>
+                <h3>ДИЗАЙН</h3>
+                <p><select name="design">
+                        <option selected> Выберите пункт...</option>
+                        <option value="Opt1">Красивый</option>
+                        <option value="Opt2">Средний</option>
+                        <option value="Opt3">Отвратительный</option>
+                    </select></p>
 
-            <p><big>АДАПТИВНОСТЬ</big></p>
-            <p><select name="adapt">
-                    <option selected> Выберите пункт...</option>
-                    <option value="Opt1">Не знаю</option>
-                    <option value="Opt2">Не знаю1</option>
-                    <option value="Opt3">Не знаю2</option>
-                </select></p>
+                <h3>АДАПТИВНОСТЬ</h3>
+                <p><select name="adapt">
+                        <option selected> Выберите пункт...</option>
+                        <option value="Opt1">Не знаю</option>
+                        <option value="Opt2">Не знаю1</option>
+                        <option value="Opt3">Не знаю2</option>
+                    </select></p>
+            </div>
         </form>
-    </div>
-    <hr>
-    <div class="table">
-        <table width="100%">
-            <tr>
-                <td>Сроки</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Стоимость</td>
-                <td>0</td>
-            </tr>
-        </table>
+
+        <img id="line" src="img/%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%B8%D1%82%D0%BE%D0%B3%D0%B0.png" alt="линий подитога">
+        <div class="table">
+            <table width="100%">
+                <tr>
+                    <td width="870px">Сроки</td>
+                    <td width="20px">0</td>
+                </tr>
+                <tr>
+                    <td width="870px">Стоимость</td>
+                    <td width="20px">0</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div class="statistics">
         <div class="stat_container">
-            <h2>ЧТО Я УМЕЮ</h2>
+            <h2>НЕМНОГО СТАТИСТИКИ</h2>
             <div class="clients">
                 <img src="img/смайл.png" alt="тут должен быть смайл">
                 <h3>120</h3>
@@ -157,55 +171,47 @@
 
     <div class="reviews">
         <h2>ОТЗЫВЫ</h2>
+        <img class="underl" src="img/underline.png" alt="подчёркивание">
         <div class="reviewers">
-            <img src="img/фотка2.png" alt="еще одно фото">
+            <img id="ph2" src="img/фотка2.png" alt="еще одно фото">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fuga labore cumque quas iure, ratione nisi, mollitia animi. Dolore sit quis adipisci eaque repellat ut odio voluptas quibusdam, eligendi ullam.</p>
             <p><b>Михаил</b>, Ген директор ПАО "Газпром"</p>
-            <img src="" alt="тут должно быть фото самого красивого мужчины">
-            <p>Она лучшая!!! Самый лучший айтишник!</p>
-            <p><b>Никита</b>, Мой молодой человек</p>
-            <img src="" alt="просто фото мамы">
-            <p>Итак сойдет! Я ничего не понимаю, но платила не я, поэтому круто!</p>
-            <p><b>Мария</b>, Моя мама</p>
         </div>
     </div>
 
     <div class="my_contacts">
         <div class="contact_container">
             <h2>МОИ КОНТАКТЫ</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia id exercitationem, amet.</p>
-            <div class="city">
-                <img src="img/гео.png" alt="ой, ошибка">
-                <p>Санкт-Петербург<br>Невский проспект 11</p>
-            </div>
-            <div class="mail">
-                <img src="img/конверт.png" alt="ой, ошибка">
-                <p>info@companyname.com</p>
-            </div>
-            <div class="projects">
-                <img src="img/труба.png" alt="ой, ошибка">
-                <p>+7 999 999 99-99</p>
+            <img class="underl" src="img/underline.png" alt="подчёркивание">
+            <p id="123">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia id exercitationem, amet.</p>
+            <div class="cont_icons">
+                <div class="city">
+                    <img src="img/гео.png" alt="ой, ошибка">
+                    <p>Санкт-Петербург<br>Невский проспект 11</p>
+                </div>
+                <div class="mail">
+                    <img src="img/конверт.png" alt="ой, ошибка">
+                    <p>info@companyname.com</p>
+                </div>
+                <div class="projects">
+                    <img src="img/труба.png" alt="ой, ошибка">
+                    <p>+7 999 999 99-99</p>
+                </div>
             </div>
         </div>
         <div class="leave_message">
             <form action="#">
                 <h3>Оставьте мне сообщение</h3>
+                <div class="name_mail">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="email" name="mail" placeholder="Email">
+                </div>
                 <p><textarea name="message" placeholder="Сообщение" cols="40" rows="5"></textarea></p>
                 <p><input type="submit" value="Отправить"></p>
             </form>
         </div>
-        <div class="socials">
-            <img src="img/фб.png" alt="ой, ошибка">
-            <img src="img/твитер.png" alt="ой, ошибка">
-            <img src="img/мяч.png" alt="ой, ошибка">
-            <img src="img/киса.png" alt="ой, ошибка">
-            <img src="img/инст.png" alt="ой, ошибка">
-            <img src="img/ин.png" alt="ой, ошибка">
-        </div>
     </div>
-
+    
     <footer>Copyright© 2021 Андрей Браун. Design by Web</footer>
 </body>
 
