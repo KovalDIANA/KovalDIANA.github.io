@@ -11,34 +11,59 @@
     <title>Диана Ковалевская - веб разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+    </script>
 </head>
 
 <body>
 
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>   
+  
+  <script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
+   
     <header>
         <nav>
             <div class="logo">Андрей Браун</div>
             <div class="menu">
                 <ul>
-                    <li>Обо мне</li>
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Прайс</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="main">
-        <div class="title_container">
-            <h1>Привет <br> Я Андрей Браун</h1>
-            <h4>Фулл стек веб-разработчик</h4>
-            <input type="submit" value="Обо мне">
-            <input type="submit" value="Мои работы">
-        </div>
-    </div>
+    <main>
+        <section class="main">
+            <div class="title_container">
+                <h1>Привет <br> Я Андрей Браун</h1>
+                <h4>Фулл стек веб-разработчик</h4>
+                <input type="button" value="Обо мне">
+                <input type="button" value="Мои работы">
+            </div>
+        </section>
+    </main>
 
     <div class="about">
         <h2>ОБО МНЕ</h2>
@@ -55,7 +80,7 @@
             <img class="underl" src="img/underline.png" alt="подчёркивание">
         </div>
         <div class="skills__container">
-            <div class="web_designer">
+            <div class="web_designer wow">
                 <img src="img/ноут.png" alt="тут должен быть ноут">
                 <h3>Веб-дизайн</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt laboriosam dicta maxime ipsum dolores.</p>
@@ -90,7 +115,7 @@
             <p>Какие-то компании</p>
             <h3>WEBSITE:</h3>
             <p><a href="http://www.somedomain.com" target="_blank">http://www.somedomain.com</a></p>
-            <p><input type="submit" value="VISIT LIVE SITE"></p>
+            <p><input type="button" value="VISIT LIVE SITE"></p>
         </div>
         <div class="contact_details2">
             <h3>Название проекта</h3>
@@ -146,7 +171,7 @@
     <div class="statistics">
         <div class="stat_container">
             <h2>НЕМНОГО СТАТИСТИКИ</h2>
-            <div class="clients">
+            <div class="clients wow">
                 <img src="img/смайл.png" alt="тут должен быть смайл">
                 <h3>120</h3>
                 <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
@@ -203,15 +228,17 @@
             <form action="#">
                 <h3>Оставьте мне сообщение</h3>
                 <div class="name_mail">
-                <input type="text" name="name" placeholder="Имя">
-                <input type="email" name="mail" placeholder="Email">
+                    <input type="text" name="name" placeholder="Имя">
+                    <input type="email" name="mail" placeholder="Email">
                 </div>
-                <p><textarea name="message" placeholder="Сообщение" cols="40" rows="5"></textarea></p>
-                <p><input type="submit" value="Отправить"></p>
+                <div class="message">
+                    <p><textarea name="message" placeholder="Сообщение" cols="40" rows="5"></textarea></p>
+                    <p><input type="button" value="Отправить"></p>
+                </div>
             </form>
         </div>
     </div>
-    
+
     <footer>Copyright© 2021 Андрей Браун. Design by Web</footer>
 </body>
 

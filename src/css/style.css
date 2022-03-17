@@ -1,3 +1,78 @@
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #637c9e;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 0.8s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: white;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+
+
+
+
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -5,7 +80,9 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    background: #344051
+    background: #344051;
+    position: fixed;
+    z-index: 200;
 }
 
 .logo {
@@ -14,6 +91,11 @@ nav {
     line-height: 60px;
     padding-left: 250px;
     float: left;
+}
+
+main {
+    width: 100%;
+    height: 100%;
 }
 
 .menu {
@@ -32,7 +114,7 @@ ul li {
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 }
 
@@ -66,6 +148,169 @@ ul li {
     padding: 0px 16px;
     margin: 50px 14px 0px 14px;
 }
+
+
+
+
+
+.title_container input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.title_container input:hover {
+    background: #344051;
+    color: white;
+}
+
+.title_container input:active {
+    transform: scale(1.1);
+}
+
+.menu li a {
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #e88604;
+}
+
+.menu li a:active {
+    transform: scale(1.1);
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li {
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+
+.menu li:nth-child(2) {
+    animation-delay: 0.4s
+}
+
+.menu li:nth-child(3) {
+    animation-delay: 0.8s
+}
+
+.menu li:nth-child(4) {
+    animation-delay: 1.2s
+}
+
+.menu li:nth-child(5) {
+    animation-delay: 1.6s
+}
+
+.menu li:nth-child(6) {
+    animation-delay: 2s
+}
+
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 330px;
+    }
+}
+
+.title_container {
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.about input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.about input:hover {
+    background: url(../img/icon_1.png) 7% 50%/auto 50% no-repeat;
+    background-color: #344051;
+    border-color: #344051;
+    color: white;
+}
+
+.about input:active {
+    transform: scale(1.1);
+}
+
+.contact_details1 input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.contact_details1 input:hover {
+    background: #db8756;
+    color: white;
+}
+
+.contact_details1 input:active {
+    transform: scale(1.1);
+}
+
+.message input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.message input:hover {
+    background: rgba(242, 243, 244, 0.5);
+    color: white;
+}
+
+.message input:active {
+    transform: scale(1.1);
+}
+
+
+
+
+
 
 .about {
     width: 100%;
@@ -141,7 +386,23 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 415px;
+    -webkit-animation: comming_1 2s ease;
+    -o-animation: comming_1 2s ease;
+    animation: comming_1 2s ease;
 }
+
+@keyframes comming_1 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 415px;
+    }
+}
+
 
 .web_designer img {
     margin: 0px auto 0px;
@@ -152,7 +413,23 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_2 2s ease;
+    -o-animation: comming_2 2s ease;
+    animation: comming_2 2s ease;
 }
+
+@keyframes comming_2 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
+}
+
 
 .development img {
     margin: 0px auto 0px;
@@ -163,7 +440,23 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_3 2s ease;
+    -o-animation: comming_3 2s ease;
+    animation: comming_3 2s ease;
 }
+
+@keyframes comming_3 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
+}
+
 
 .optimization img {
     margin: 0px auto 0px;
@@ -174,6 +467,21 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_4 2s ease;
+    -o-animation: comming_4 2s ease;
+    animation: comming_4 2s ease;
+}
+
+@keyframes comming_4 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
 }
 
 .marketing img {
@@ -314,7 +622,7 @@ ul li {
 .statistics {
     width: 100%;
     height: 496px;
-    background: url(../img/stat_bg.jpg) center/cover no-repeat;
+    background: url(../img/stat_bg.jpg) fixed center/cover  no-repeat;
     margin-top: 100px;
 }
 
@@ -345,6 +653,21 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 415px;
+    -webkit-animation: comming_5 2s ease;
+    -o-animation: comming_5 2s ease;
+    animation: comming_5 2s ease;
+}
+
+@keyframes comming_5 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 415px;
+    }
 }
 
 .clients img {
@@ -356,6 +679,21 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_6 2s ease;
+    -o-animation: comming_6 2s ease;
+    animation: comming_6 2s ease;
+}
+
+@keyframes comming_6 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
 }
 
 .hours img {
@@ -367,8 +705,22 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_7 2s ease;
+    -o-animation: comming_7 2s ease;
+    animation: comming_7 2s ease;
 }
 
+@keyframes comming_7 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
+}
 .projects img {
     margin: 0px auto 0px;
     display: block;
@@ -378,8 +730,22 @@ ul li {
     display: inline-block;
     width: 200px;
     margin: 80px 0px 0px 90px;
+    -webkit-animation: comming_3 2s ease;
+    -o-animation: comming_3 2s ease;
+    animation: comming_3 2s ease;
 }
 
+@keyframes comming_8 {
+    from {
+        opacity: 0;
+        margin-left: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 90px;
+    }
+}
 .reward img {
     margin: 0px auto 0px;
     display: block;
@@ -453,7 +819,7 @@ ul li {
 .mail {
     float: left;
     margin: 45px 0px 0px 103px;
-    width: 160px;    
+    width: 160px;
 }
 
 .mail img {
@@ -487,11 +853,11 @@ ul li {
     padding: 10px 0px 10px 15px;
 }
 
-.name_mail input[type=text]{
+.name_mail input[type=text] {
     margin: 45px 27px 10px 590px;
 }
 
-.leave_message textarea {
+.message textarea {
     width: 731px;
     height: 95px;
     background-color: #d1d5db;
@@ -500,7 +866,7 @@ ul li {
     padding: 10px 0px 0px 15px;
 }
 
-.leave_message input[type=submit]{
+.message input {
     display: block;
     width: 125px;
     height: 45px;
@@ -514,7 +880,7 @@ ul li {
     font-weight: bold;
 }
 
-footer{
+footer {
     width: 100%;
     height: 90px;
     text-align: center;
